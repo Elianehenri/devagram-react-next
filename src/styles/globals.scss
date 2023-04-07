@@ -6,6 +6,14 @@
   font-size: 14px;
 }
 
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
 
+.oculto {
+  display: none !important;
+}
 
 @import '../../public/fontes/fonts.scss';
+@import '../../componentes/botao/botao.scss';
