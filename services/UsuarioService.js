@@ -22,5 +22,8 @@ export default class UsuarioService extends DevagramApiService {
         return this.post('/cadastro', dados);
     }
 
+    estaAutenticado() {
+        return localStorage.getItem('token') !== null;
+    }
     
 }
