@@ -14,6 +14,11 @@ export default function Cabecalho() {
     const [termoPesquisado, setTermoPesquisado] = useState('');
     const router = useRouter();
 
+    let cabecalhoClassName = '';
+    if (window && window.location.pathname !== '/') {
+        cabecalhoClassName = 'desktop';
+    }
+
     const aoPesquisar = async (e) => {
         setTermoPesquisado(e.target.value);
         setResultadoPesquisa([]);
