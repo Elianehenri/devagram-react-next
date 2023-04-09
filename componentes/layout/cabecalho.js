@@ -4,10 +4,15 @@ import Image from 'next/image';
 import Navegacao from './navegacao';
 import { useState } from 'react';
 import ResultadoPesquisa from './resultadoPesquisa';
+import UsuarioService from '../../services/UsuarioService';
+import { useRouter } from 'next/router';
+
+const usuarioService = new UsuarioService();
 
 export default function Cabecalho() {
     const [resultadoPesquisa, setResultadoPesquisa] = useState([]);
     const [termoPesquisado, setTermoPesquisado] = useState('');
+    const router = useRouter();
 
     const aoPesquisar = async (e) => {
         setTermoPesquisado(e.target.value);
@@ -30,6 +35,11 @@ export default function Cabecalho() {
         setResultadoPesquisa([]);
         setTermoPesquisado('');
         router.push(`/perfil/${id}`);
+    }
+
+    //ver
+    const redirecionarParaHome = () => {
+        router.push('/');
     }
 
      return (

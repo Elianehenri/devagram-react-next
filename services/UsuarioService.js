@@ -25,5 +25,18 @@ export default class UsuarioService extends DevagramApiService {
     estaAutenticado() {
         return localStorage.getItem('token') !== null;
     }
-    
+
+    async pesquisar(termoDaPesquisa) {
+        return this.get('/pesquisa?filter=' + termoDaPesquisa);
+    }
+
+
+    obterInformacoesDoUsuarioLogado() {
+        return {
+            id: localStorage.getItem('id'),
+            nome: localStorage.getItem('nome'),
+            email: localStorage.getItem('email'),
+            avatar: localStorage.getItem('avatar')
+        }
+    }
 }
