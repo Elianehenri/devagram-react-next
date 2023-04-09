@@ -1,4 +1,5 @@
 /* eslint-disable react/display-name */
+import { useRouter } from "next/router";
 import Cabecalho from "../componentes/layout/cabecalho";
 import Rodape from "../componentes/layout/rodape";
 import UsuarioService from "../services/UsuarioService";
@@ -20,7 +21,7 @@ export default function comAutorizacao(Componente) {
 
              return (
                     <>
-                       <Cabecalho usuarioLogado={usuarioLogado} />
+                        <Cabecalho usuarioLogado={usuarioLogado} />
                         <Componente usuarioLogado={usuarioLogado} {...props} />
                         <Rodape usuarioLogado={usuarioLogado} />
                        
