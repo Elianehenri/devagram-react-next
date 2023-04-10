@@ -79,6 +79,19 @@ input {
   }
   
 }
+
+.linhaDivisoria {
+  margin: 0;
+  border: none;
+  background-color: $cinza1;
+  height: 1px;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    margin: 0 auto;
+    width: 94%;
+  }
+}
+
 @import '../../public/fontes/fonts.scss';
 @import '../../componentes/botao/botao.scss';
 @import '../../componentes/inputPublico/inputPublico.scss';
