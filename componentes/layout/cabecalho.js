@@ -1,8 +1,8 @@
-import logoHorizontalImg from '../../public/imagens/logoHorizontal.svg';
-import imagemLupa from '../../public/imagens/lupa.svg'
 import Image from 'next/image';
-import Navegacao from './navegacao';
 import { useState } from 'react';
+import logoHorizontalImg from '../../public/imagens/logoHorizontal.svg';
+import imagemLupa from '../../public/imagens/lupa.svg';
+import Navegacao from './navegacao';
 import ResultadoPesquisa from './resultadoPesquisa';
 import UsuarioService from '../../services/UsuarioService';
 import { useRouter } from 'next/router';
@@ -42,7 +42,7 @@ export default function Cabecalho() {
         router.push(`/perfil/${id}`);
     }
 
-    //ver
+    
     const redirecionarParaHome = () => {
         router.push('/');
     }
