@@ -26,6 +26,7 @@ const mapaDeRotas = {
         imagemPadrao: imgUsuarioCinza
     }
 }
+
 export default function Navegacao({ className }) {
     const [rotaAtiva, setRotaAtiva] = useState('home');
     const router = useRouter();

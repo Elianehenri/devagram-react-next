@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { LoadingHelper } from '../helpers/loadingHelper';
 
 export default class DevagramApiService {
     constructor() {

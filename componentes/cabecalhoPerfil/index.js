@@ -2,6 +2,7 @@ import { useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 import imgSetaEsquerda from '../../public/imagens/setaEsquerda.svg';
+import imgLogout from '../../public/imagens/logout.svg';
 import CabecalhoComAcoes from '../cabecalhoComAcoes';
 import Botao from '../botao';
 import Avatar from '../avatar';

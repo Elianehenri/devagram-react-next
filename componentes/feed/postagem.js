@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Avatar from "../avatar";
-
 import imgCurtir from '../../public/imagens/curtir.svg';
 import imgCurtido from '../../public/imagens/curtido.svg';
 import imgComentarioAtivo from '../../public/imagens/comentarioAtivo.svg';
@@ -119,7 +118,7 @@ export default function Postagem({
                         alt='icone curtir'
                         width={20}
                         height={20}
-                        onClick={() => console.log('curtir')}
+                        onClick={alterarCurtida }
                     />
 
                     <Image

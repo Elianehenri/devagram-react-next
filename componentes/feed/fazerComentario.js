@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Avatar from "../avatar";
 
 export function FazerComentario({ usuarioLogado, comentar }) {
@@ -28,7 +29,6 @@ export function FazerComentario({ usuarioLogado, comentar }) {
         <div className="containerFazerComentario">
             <Avatar src={usuarioLogado.avatar} />
             <textarea
-             
                 rows={linhas}
                 onChange={aoDigitarComentario}
                 onKeyDown={aoPressionarQualquerTecla}
