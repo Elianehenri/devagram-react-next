@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import Feed from '../../../componentes/feed';
 import { useRouter } from 'next/router';
-//import comAutorizacao from '../../hoc/comAutorizacao';
 import comAutorizacao from '../../../hoc/comAutorizacao'
 import CabecalhoPerfil from '../../../componentes/cabecalhoPerfil';
 import UsuarioService from '../../../services/UsuarioService';
@@ -32,13 +31,16 @@ function Perfil({usuarioLogado}) {
         return router.query.id === 'eu';
     }
 
-    useEffect(async () => {
+    useEffect( () => {
         if (!router.query.id) {
             return;
         }
 
+        async function obterPerfil(){
         const dadosPerfil = await obterPerfil(router.query.id);
         setUsuario(dadosPerfil);
+        }
+        obterPerfil();
     }, [router.query.id]);
 
     return (

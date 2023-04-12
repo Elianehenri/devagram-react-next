@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useRouter } from 'next/router';
-import Botao from "../../componentes/botao";
+import Botao from '../../../componentes/botao';
 import CabecalhoComAcoes from "../../../componentes/cabecalhoComAcoes";
 import  UploadImagem  from "../../../componentes/uploadImagem";
 import comAutorizacao from "../../../hoc/comAutorizacao";
-import imagemPublicacao from '../../../public/imagens/'
+import imagemPublicacao from '../../../public/imagens/imagemPublicacao.svg'
 import imagemSetaEsquerda from '../../../public/imagens/setaEsquerda.svg';
 import FeedService from "../../../services/FeedService";
 
