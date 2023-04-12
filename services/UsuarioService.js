@@ -30,7 +30,7 @@ export default class UsuarioService extends DevagramApiService {
     }
 
     async atualizarPerfil(dados) {
-        return this.put(`/usuario`, dados);
+        return this.put('/usuario', dados);
     }
 
     estaAutenticado() {

@@ -1,19 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
-import Postagem from "./postagem";
 import FeedService from "../../services/FeedService";
+import Postagem from "./postagem";
+
+
 
 const feedService = new FeedService();
 
 export default function Feed({ usuarioLogado, usuarioPerfil }) {
     const [listaDePostagens, setListaDePostagens] = useState([]);
 
-    useEffect(async () => {
+    useEffect(() => {
+
+        async function  carregaPostagens() {
         setListaDePostagens([]);
         const { data } = await feedService.carregarPostagens(usuarioPerfil?._id);
 
-        const postagensFormatadas = data.map((postagem) => (
-            {
+        const postagensFormatadas = data.map((postagem) => ({
                 id: postagem._id,
                 usuario: {
                     id: postagem.userId,
@@ -27,10 +30,12 @@ export default function Feed({ usuarioLogado, usuarioPerfil }) {
                     nome: c.nome,
                     mensagem: c.comentario
                 }))
-            }
-        ));
-
+            }));
+        
         setListaDePostagens(postagensFormatadas);
+        }
+        
+        carregaPostagens();
     }, [usuarioLogado, usuarioPerfil]);
 
     if (!listaDePostagens.length) {
