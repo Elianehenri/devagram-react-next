@@ -80,6 +80,61 @@ input {
   
 }
 
+.desktop {
+  display: block;
+
+  @media screen and (max-width: calc($desktopBreakpoint - 1px)) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: block;
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    display: none;
+  }
+}
+
+.mensagemValidacao {
+  display: block;
+  color: $vermelho;
+  font-size: 90%;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+.barraNavegacao {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 10px 0px;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+}
+
+strong {
+  font-family: $fontBold;
+}
+
+body {
+  @media screen and (min-width: $desktopBreakpoint) {
+    background-color: $cinza5;
+    background-image:url('/public/imagens/imagemDeFundoDesktop.svg')
+  }
+}
+
+.largura30pctDesktop {
+  @media screen and (min-width: $desktopBreakpoint) {
+    width: 30%;
+    margin: auto;
+  }
+}
+
 .linhaDivisoria {
   margin: 0;
   border: none;
